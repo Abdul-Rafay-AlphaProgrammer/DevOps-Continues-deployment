@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillShift AI - Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .chat-header {
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .chat-body {
+      padding: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+    }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #334155;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    .chat-input button {
+      padding: 10px;
+      border: none;
+      background-color: #38bdf8;
+      color: #0f172a;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo"><i class="fas fa-graduation-cap"></i> SkillShift AI</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="profile" style="padding: 2rem;">
+    <h2 style="text-align:center;">Welcome, Abdul Rafay</h2>
+    <div style="max-width: 900px; margin: 2rem auto; background-color: #1e293b; padding: 2rem; border-radius: 10px;">
+      <h3><i class="fas fa-user"></i> Profile Overview</h3>
+      <p><strong>Email:</strong> abdulrafay@example.com</p>
+      <p><strong>Enrolled Track:</strong> Full Stack Developer</p>
+      <p><strong>Progress:</strong> 68%</p>
+      <div style="background: #334155; height: 10px; border-radius: 5px; margin-top: 0.5rem;">
+        <div style="width: 68%; background: #38bdf8; height: 100%; border-radius: 5px;"></div>
+      </div>
+    </div>
+
+    <div style="max-width: 900px; margin: 2rem auto; background-color: #1e293b; padding: 2rem; border-radius: 10px;">
+      <h3><i class="fas fa-award"></i> Verified Credentials</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><i class="fas fa-check-circle" style="color: #38bdf8;"></i> HTML & CSS Certificate (Blockchain Verified)</li>
+        <li><i class="fas fa-check-circle" style="color: #38bdf8;"></i> Python for Data Science</li>
+        <li><i class="fas fa-check-circle" style="color: #38bdf8;"></i> React Fundamentals</li>
+      </ul>
+    </div>
+
+    <div style="max-width: 900px; margin: 2rem auto; background-color: #1e293b; padding: 2rem; border-radius: 10px;">
+      <h3><i class="fas fa-chart-line"></i> Market Analysis</h3>
+      <p>📈 Top trending skills: AI, Data Analytics, Cybersecurity, Full Stack Dev</p>
+      <p>💼 Freelance growth: 30% rise in demand for remote developers (2025)</p>
+      <p>📊 Your standing: Top 12% in Full Stack Development in your region</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 2rem auto; background-color: #1e293b; padding: 2rem; border-radius: 10px;">
+      <h3><i class="fas fa-briefcase"></i> Project History</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><i class="fas fa-laptop-code"></i> Built a portfolio website for a real client (Freelance Match)</li>
+        <li><i class="fas fa-chart-bar"></i> Data dashboard for e-commerce trends</li>
+        <li><i class="fas fa-mobile-alt"></i> UI testing feedback for mobile health app</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Chatbot UI -->
+  <div class="chatbot">
+    <div class="chat-header">Ask SkillBot</div>
+    <div class="chat-body" id="chat-body">
+      <p><strong>Bot:</strong> Hi! Ask me anything about skills, jobs, or education!</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type your question...">
+      <button onclick="handleChat()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function handleChat() {
+      const input = document.getElementById('user-input');
+      const chatBody = document.getElementById('chat-body');
+      const userText = input.value.trim();
+      if (userText) {
+        chatBody.innerHTML += `<p><strong>You:</strong> ${userText}</p>`;
+        chatBody.innerHTML += `<p><strong>Bot:</strong> Thanks for your question! We will analyze and suggest shortly.</p>`;
+        input.value = "";
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+    }
+  </script>
+
+  <footer>
+    <p><i class="fas fa-code"></i> &copy; 2025 SkillShift AI | Empowering Careers</p>
+  </footer>
+</body>
+</html>
